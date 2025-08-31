@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>El reconocimiento facial</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="face-api.min.js"></script>
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <img id="logoSuperior" src="media/logo superior.png" alt="Logo" />
+  <video id="video" width="640" height="480" autoplay muted></video>
+  <canvas id="recordCanvas" width="500" height="450" style="display:none"></canvas>
+  <p id="message"></p>
+  <p id="recordingStatus"></p>
+  <div id="overlay" style="display: none;">
+  <video id="loopPlayer" autoplay playsinline></video>
+  </div>
+
+  <!-- Botonera SOLO para pantalla 2 (grabación) -->
+
+  <!-- Coloca este img sobre el video, con CSS absolute igual que el video -->
+  <img id="videoSnapshot" style="display:none; position:absolute; top:110px; left:50%; transform:translateX(calc(-50% + 400px)); z-index:11; width:500px; height:450px;">
+</body>
+</html>
